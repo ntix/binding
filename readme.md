@@ -10,8 +10,6 @@ copied from
 and converted to Deno
 [deno.land](https://deno.land/)
 
-[Documentation and working example](https://ntix.github.io/binding/)
-
 ## example
 
 ```html
