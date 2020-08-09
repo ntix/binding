@@ -1,0 +1,13 @@
+scripts:
+  compile:
+    cmd: deno run --unstable --allow-read --allow-write compile.ts
+
+  bundle:
+    cmd: deno run --unstable --allow-read --allow-write bundle.ts
+    #cmd: deno bundle --config tsconfig.json mod.ts binding.js
+
+  test:
+    cmd: deno test --config tsconfig.json
+
+  start:
+    cmd: deno run --allow-net --allow-read server.ts

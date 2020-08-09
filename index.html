@@ -1,0 +1,28 @@
+<html>
+<title>@ntix/binding</title>
+
+<body>
+  <button bind
+          [inner-text]="text"
+          {click}="onClick"></button>
+
+  <script type="module">
+    import { bind } from './mod.js';
+
+    const context = {
+      text: 'click me',
+      onClick: e => {
+        e.stopPropagation();
+
+        context.text = 'thanks!';
+        setTimeout(() => {
+          context.text = 'click me again';
+        }, 2000);
+      }
+    };
+
+    bind(document, context);
+  </script>
+</body>
+
+</html>
